@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+<!-- les deux éléments suivants donne un nom à notre servlet et à notre package où se trouve la classe
+    <servlet>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>com.example.Proj1.HelloServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+-->
+</web-app>
