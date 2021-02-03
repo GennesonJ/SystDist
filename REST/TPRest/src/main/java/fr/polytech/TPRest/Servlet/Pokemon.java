@@ -1,16 +1,36 @@
 package fr.polytech.TPRest.Servlet;
 
+import javax.persistence.*;
+import java.io.Serializable;
 
-public class Pokemon {
-    String Nom;
-    String Niveau;
+@Entity
+@Table(name = "pokemon")
+public class Pokemon implements Serializable {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int Id;
+    @Column(name = "nom")
+    private String Nom;
+    @Column(name = "niveau")
+    private String Niveau;
+
 
     public Pokemon() {
     }
 
-    public Pokemon(String Nom, String Niveau) {
-        this.Nom = Nom;
-        this.Niveau = Niveau;
+    public Pokemon(int id, String nom, String niveau) {
+        Id = id;
+        Nom = nom;
+        Niveau = niveau;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
     }
 
     public String getNom() {
@@ -31,7 +51,11 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "Pokemon[Nom=" + Nom + ", Niveau=" + Niveau + "]";
+        return "Pokemon{" +
+                "Id=" + Id +
+                ", Nom='" + Nom + '\'' +
+                ", Niveau='" + Niveau + '\'' +
+                '}';
     }
 }
 

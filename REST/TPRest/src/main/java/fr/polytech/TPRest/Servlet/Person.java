@@ -2,7 +2,6 @@ package fr.polytech.TPRest.Servlet;
 
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
-import javax.xml.ws.Endpoint;
 
 @JsonSerialize
 public class Person {

@@ -4,15 +4,25 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Product {
+    int code;
     String nom;
-    int prix;
+    double prix;
 
     public Product() {
     }
 
-    public Product(String nom, int prix) {
+    public Product(int code, String nom, double prix) {
+        this.code = code;
         this.nom = nom;
         this.prix = prix;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
     }
 
     public String getNom() {
@@ -23,19 +33,11 @@ public class Product {
         this.nom = nom;
     }
 
-    public int getPrix() {
+    public double getPrix() {
         return prix;
     }
 
-    public void setPrix(int prix) {
+    public void setPrix(double prix) {
         this.prix = prix;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "nom='" + nom + '\'' +
-                ", prix=" + prix +
-                '}';
     }
 }
