@@ -3,6 +3,8 @@
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
+
+    <!--Param pour la connexion bdd-->
     <session-factory>
         <!-- Database connection settings -->
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
@@ -16,8 +18,11 @@
         <property name="hibernate.c3p0.max_statements">50</property>
         <property name="hibernate.c3p0.idle_test_period">3000</property>
 
-        <mapping class="fr.polytech.TPRest.Servlet.Metier.Perso"/>
-        <mapping class="fr.polytech.TPRest.Servlet.Metier.PersoDetails"/>
+        <!--Objet-->
+        <mapping class="fr.polytech.TPHibernate.Servlet.Metier.Perso"/>
+        <mapping class="fr.polytech.TPHibernate.Servlet.Metier.PersoDetails"/>
+        <mapping class="fr.polytech.TPHibernate.Servlet.Metier.Compétence"/>
+        <mapping class="fr.polytech.TPHibernate.Servlet.Metier.Equipement"/>
 
     </session-factory>
 </hibernate-configuration>

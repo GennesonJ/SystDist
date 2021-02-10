@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.polytech</groupId>
-    <artifactId>TPRest</artifactId>
+    <artifactId>TPHibernate</artifactId>
     <version>1.0</version>
-    <name>TPRest</name>
+    <name>TPHibernate</name>
     <packaging>war</packaging>
 
     <properties>
